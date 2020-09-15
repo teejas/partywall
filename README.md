@@ -24,9 +24,12 @@ Once authenticated, users can add items to a list of available items, get the li
 
 ## Usage/Setup
 
-Clone the repo, unzip, step into /partywall folder. Run `npm install` to install all necessary dependencies. Run `npm start` to expose API on port 3000 (make calls to http://localhost:3000).
+1. Clone the repo, unzip, step into /partywall folder
+2. Run `npm install` to install all necessary dependencies
+3. Run `npm start` to expose API on port 3000 (make calls to http://localhost:3000).
 
 ## Comments
 
-With more time I would've built a usable frontend (something purely functional just allowing user creation, list view, and editing).
+With more time I would've built a usable frontend (something purely functional just allowing user creation, list view, and editing). I did spend some time building one but decided against rendering anything in the interest of cleanliness, but I could show this over video.
+
 I also would've added encryption for passwords using bcrypt and made it so that users can only delete items they added.
