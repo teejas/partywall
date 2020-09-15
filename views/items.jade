@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  h1= title
+  p List of items for user
+
+  ul
+    each item in items
+      li Type: #{item.type}, Name: #{item.name}, Description: #{item.description}, Weight: #{item.weight}, Price: #{item.price}, Quantity: #{item.quantity}
+
+  form(action="/items", method="post")
+    div.input
+      p Type
+      select(id="type", name="type")
+        option(value="food") Food
+        option(value="drink") Drink
+    div.input
+      p Name
+      input(type="text", name="name", required)
+    div.input
+      p Description
+      input(type="text", name="description")
+    div.input
+      p Weight/Volume
+      input(type="text", name="weight", required)
+    div.input
+      p Price
+      input(type="text", name="price", required)
+    div.input
+      p Quantity
+      input(type="number", name="quantity", required)
+    div.input
+      p Create item
+      input(type="submit", name="Log In")
