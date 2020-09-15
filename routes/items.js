@@ -67,11 +67,11 @@ router.delete('/', function(req, res, next) {
     db_res.deleteOne({ _id: req.query.id }, (err) => {
       if(err) {
         console.log(err)
+        return res.status(400).json({ errors: "No item found with id: " + req.query.id })
       } else {
         return res.status(200).json({ success: 'Deleted item with id: ' + req.query.id })
       }
     })
-
   } else {
     return res.status(400).json({ errors: "Not logged in" })
   }
